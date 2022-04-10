@@ -1,16 +1,7 @@
 <template>
   <div>
     <div class="h-screen bg">
-      <div class="h-20 px-3 flex items-center">
-        <img
-          alt="alt message"
-          src="~assets/images/logo-white.png"
-          height="70"
-          width="70"
-          class="mr-auto"
-        />
-        <NuxtLink class="text-white mr-8" to="/journal">Journal</NuxtLink>
-      </div>
+      <NavBar page="home"/>
     </div>
   </div>
 </template>
@@ -29,3 +20,4 @@ export default Vue.extend({
   background-size: cover;
 }
 </style>
+F
