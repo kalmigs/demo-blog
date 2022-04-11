@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar page="journal" />
-    <article class="max-w-5xl m-auto">
+    <article class="max-w-5xl m-auto p-8">
       <div class="my-8">
         <img
         class="h-96 min-w-full object-cover"
@@ -23,6 +23,7 @@
 
       <nuxt-content :document="article" />
     </article>
+    <Footer/>
   </div>
 </template>
 

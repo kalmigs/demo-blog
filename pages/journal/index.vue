@@ -9,8 +9,6 @@
 
       <ul class="grid gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 py-8">
         <li v-for="article of articles" :key="article.slug">
-
-          <!-- <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }"> -->
           <NuxtLink :to="`/journal/${article.slug}`">
             <img
               v-if="article.img"
@@ -32,6 +30,7 @@
         </li>
       </ul>
     </div>
+    <Footer />
   </div>
 </template>
 
