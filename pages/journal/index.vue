@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar page="journal" />
+    <NavBar page="journals" />
     <img
       src="https://www.outdooradrentures.com/_nuxt/img/journal.898b170.jpg"
     />

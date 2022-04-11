@@ -1,21 +1,29 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
+  <div>
+    <NavBar page="journal" />
+    <article class="max-w-5xl m-auto">
+      <div class="my-8">
+        <img
+        class="h-96 min-w-full object-cover"
+        :src="article.img"
+        :alt="article.alt"
+      />
+      </div>
 
-    <nav>
-      <ul>
-        <li v-for="link of article.toc" :key="link.id">
-          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
+      <div class="my-16">
+        <h1 class="font-bold text-5xl mb-2">{{ article.title }}</h1>
+        <p class="font-semibold text-xl">{{ article.description }}</p>
+        <p>
+          <span class="font-semibold mr-2"
+            >Written by {{ article.author.name }}</span
+          >
+          <span>{{ formatDate(article.updatedAt) }}</span>
+        </p>
+      </div>
 
-    <img :src="article.img" :alt="article.alt" />
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
-
-    <nuxt-content :document="article" />
-  </article>
+      <nuxt-content :document="article" />
+    </article>
+  </div>
 </template>
 
 
@@ -40,9 +48,11 @@ export default {
 .nuxt-content p {
   margin-bottom: 20px;
 }
+
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
+  padding-bottom: 2rem;
 }
 .nuxt-content h3 {
   font-weight: bold;
@@ -54,5 +64,6 @@ export default {
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
+  color: #484848;
 }
 </style>
