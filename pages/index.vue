@@ -4,7 +4,7 @@
     <div class="h-screen bg flex justify-center items-center">
       <div
         data-v-65066cf5=""
-        class="max-w-screen-lg flex-auto lg:mb-0 mb-12 mx-auto"
+        class="max-w-screen-lg flex-auto lg:mb-0 mb-12 mx-auto px-4"
       >
         <h1
           data-v-65066cf5=""

@@ -6,6 +6,7 @@
     />
     <div class="max-w-5xl m-auto p-4 my-12">
       <h1 class="mb-2 text-3xl font-semibold">Journals</h1>
+      <AppSearchInput class="w-80" />
 
       <ul class="grid gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 py-8">
         <li v-for="article of articles" :key="article.slug">
